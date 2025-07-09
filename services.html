@@ -1,22 +1,24 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Services | AgostarTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.ico" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CD4F4EPSS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0CD4F4EPSS');
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CD4F4EPSS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0CD4F4EPSS');
+  </script>
 </head>
+
+<body>
 <header class="navbar">
   <div class="logo">AgostarTech</div>
   <nav>
@@ -28,60 +30,102 @@
   </nav>
 </header>
 
-<body>
+<section class="services">
+  <h1>My <span class="brand">Services</span></h1>
+  <p>I offer professional tech services under the brand <strong>AgostarTech</strong>. Explore what I do below:</p>
 
-  <section class="services">
-    <h1>My <span class="brand">Services</span></h1>
-    <p>I offer powerful, professional IT and tech services through my brand <strong>AgostarTech</strong>.</p>
+  <div class="services-grid">
 
-    <div class="services-grid">
-
-      <!-- Service 1 -->
-      <div class="service-card">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Django Web Development</h3>
-        <p>Custom dynamic websites, admin dashboards, authentication systems using Django & Python.</p>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-card">
-        <i class="fas fa-tools"></i>
-        <h3>Computer Maintenance</h3>
-        <p>Repairs, formatting, driver installations, OS setup, virus removal, speed optimization.</p>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <i class="fas fa-network-wired"></i>
-        <h3>Networking & Packet Tracer</h3>
-        <p>Router/switch configuration, OSPF & EIGRP setup, network simulation in Cisco Packet Tracer.</p>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="service-card">
-        <i class="fas fa-user-shield"></i>
-        <h3>Cybersecurity & Ethical Hacking</h3>
-        <p>Wi-Fi cracking, payload testing, phishing labs, Linux security tools & penetration testing.</p>
-      </div>
-
-      <!-- Service 5 -->
-      <div class="service-card">
-        <i class="fas fa-certificate"></i>
-        <h3>Certificate Generation</h3>
-        <p>Smart certificate design with QR code, watermark, barcode, and user photo integration.</p>
-      </div>
-
-      <!-- Service 6 -->
-      <div class="service-card">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Tech Tutoring & Training</h3>
-        <p>Hands-on training in Python, Django, Linux, GitHub, networking, and cybersecurity tools.</p>
-      </div>
-
+    <!-- Example Service Card -->
+    <div class="service-card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Django Web Development</h3>
+      <p>Secure web apps, dashboards, and admin systems built using Python and Django.</p>
+      <button class="quote-btn" onclick="showModal('Django Web Development', 'Custom Django systems with auth, CRUD, PDF export, and beautiful UI/UX.')">Get a Quote</button>
     </div>
+
+    <div class="service-card">
+      <i class="fas fa-tools"></i>
+      <h3>Computer Maintenance & Repair</h3>
+      <p>Fixing slow systems, OS setup, virus removal, hardware upgrades, and tuning.</p>
+      <button class="quote-btn" onclick="showModal('Computer Maintenance & Repair', 'Expert PC/laptop diagnosis, repairs, optimization, and formatting.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-database"></i>
+      <h3>Database Systems</h3>
+      <p>Design and management of MySQL, SQLite & PostgreSQL for scalable apps.</p>
+      <button class="quote-btn" onclick="showModal('Database Systems', 'Schema design, relationships, optimization & backups with security.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-network-wired"></i>
+      <h3>Networking & Cisco Tools</h3>
+      <p>Router setup, topology, Packet Tracer simulations, and subnetting mastery.</p>
+      <button class="quote-btn" onclick="showModal('Networking & Cisco Tools', 'Real-world routing labs (OSPF, EIGRP), Wireshark, & configs.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-user-shield"></i>
+      <h3>Cybersecurity & Ethical Hacking</h3>
+      <p>Offensive security labs with payloads, phishing, cracking, and OSINT tools.</p>
+      <button class="quote-btn" onclick="showModal('Cybersecurity & Hacking', 'Professional pentesting training, metasploit, keyloggers & phishing.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-file-alt"></i>
+      <h3>Microsoft Office (Word, Excel, PPT)</h3>
+      <p>Powerful documents, data analysis in Excel, charts, formulas, and reports.</p>
+      <button class="quote-btn" onclick="showModal('MS Office Tools', 'Advanced Microsoft Word, PowerPoint, and Excel with reporting.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-certificate"></i>
+      <h3>Smart Certificate Generation</h3>
+      <p>Watermarked certificates with photos, serials, barcodes and QR codes.</p>
+      <button class="quote-btn" onclick="showModal('Smart Certificate Design', 'Event-ready certificate printing with modern visuals and security.')">Get a Quote</button>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Tech Training & Mentorship</h3>
+      <p>Personal coaching in coding, networking, ethical hacking, Linux, GitHub & more.</p>
+      <button class="quote-btn" onclick="showModal('Tech Training & Mentorship', 'Beginner to pro training sessions tailored to your path.')">Get a Quote</button>
+    </div>
+
+  </div>
+
+  <!-- Downloadable Brochure -->
+  <div class="resume-actions" style="text-align: center; margin-top: 50px;">
+    <a href="assets/docs/AgostarTech_Services_Brochure.pdf" class="download-btn" download>📄 Download Service Brochure</a>
+  </div>
+
+  <!-- Why Choose Me Section -->
+  <section class="resume-section">
+    <h2>Why Choose <span class="brand">AgostarTech</span>?</h2>
+    <ul style="list-style: none; padding: 0; font-size: 18px;">
+      <li>✅ 5+ years hands-on tech experience</li>
+      <li>✅ Friendly support & fast delivery</li>
+      <li>✅ Real-world projects and solutions</li>
+      <li>✅ Strong expertise in both software & hardware</li>
+      <li>✅ 100% client satisfaction guarantee</li>
+    </ul>
   </section>
-  <script src="assets/js/disableInspect.js"></script>
 
+</section>
 
+<script>
+  function showModal(title, details) {
+    Swal.fire({
+      title: title,
+      text: details,
+      icon: 'info',
+      confirmButtonText: 'Contact Now',
+      confirmButtonColor: '#00ffcc'
+    });
+  }
+</script>
+
+<script src="assets/js/disableInspect.js"></script>
 </body>
 </html>
