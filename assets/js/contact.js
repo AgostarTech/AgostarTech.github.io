@@ -1,16 +1,33 @@
+// Initialize EmailJS with your public key
 (function () {
-  emailjs.init("sxYPres4FB1gBpy37");  // ✅ Correct EmailJS Public Key
+  emailjs.init("sxYPres4FB1gBpy37"); // ✅ Your EmailJS public key
 })();
 
+// Handle contact form submission
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  emailjs.sendForm("service_ydbhe8n", "__ejs-test-mail-service__", this)
+  const formMessage = document.getElementById("form-message");
+  const recaptchaResponse = grecaptcha.getResponse();
+
+  // Check if reCAPTCHA is completed
+  if (!recaptchaResponse) {
+    formMessage.innerText = "❌ Please complete the reCAPTCHA.";
+    formMessage.style.color = "red";
+    return;
+  }
+
+  // Send form data via EmailJS
+  emailjs.sendForm("service_ydbhe8n", "template_hao1o8o", this)
     .then(() => {
-      document.getElementById("form-message").innerText = "✅ Message sent successfully!";
+      formMessage.innerText = "✅ Message sent successfully!";
+      formMessage.style.color = "green";
       this.reset();
-    }, (error) => {
-      document.getElementById("form-message").innerText = "❌ Failed to send message!";
+      grecaptcha.reset();
+    })
+    .catch((error) => {
+      formMessage.innerText = "❌ Failed to send message!";
+      formMessage.style.color = "red";
       console.error("EmailJS error:", error);
     });
 });
