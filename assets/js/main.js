@@ -12,9 +12,9 @@ const typingElement = document.querySelector(".typing-text span");
 let typingIndex = 0;
 let charIndex = 0;
 let typingForward = true;
-let typingDelay = 150;
-let eraseDelay = 100;
-let nextTextDelay = 2000;
+const typingDelay = 150;
+const eraseDelay = 100;
+const nextTextDelay = 2000;
 
 function type() {
   if (!typingElement) return;
@@ -52,27 +52,23 @@ const appearOptions = {
   rootMargin: "0px 0px -50px 0px",
 };
 
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScroll
-) {
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("appear");
-    appearOnScroll.unobserve(entry.target);
+    observer.unobserve(entry.target);
   });
-},
-appearOptions);
+}, appearOptions);
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// Optional: mobile nav toggle
+// Mobile nav toggle
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("header nav");
 
-if(navToggle) {
+if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
   });

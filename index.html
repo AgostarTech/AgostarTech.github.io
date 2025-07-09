@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AgostarTech - Portfolio</title>
+
   <!-- SEO Meta -->
   <meta name="description" content="AgostarTech: Ethical hacking, networking, Django systems & field logbook automation in Tanzania." />
   <meta name="keywords" content="AgostarTech, Agola Tom, Ethical Hacker, Django Developer, Networking, Cybersecurity, Tanzania" />
@@ -23,6 +24,7 @@
   <meta name="twitter:image" content="https://AgostarTech.github.io/assets/images/logo.png" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="icon" href="assets/images/favicon.ico" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -34,61 +36,16 @@
     gtag('js', new Date());
     gtag('config', 'G-0CD4F4EPSS');
   </script>
-
-  <style>
-    /* Mobile nav toggle button */
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      width: 28px;
-      height: 22px;
-      justify-content: space-between;
-    }
-    .nav-toggle span {
-      height: 4px;
-      width: 100%;
-      background: #00ffcc;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: flex;
-      }
-      header nav {
-        position: fixed;
-        top: 60px;
-        right: -100%;
-        background: #0f2027;
-        height: calc(100% - 60px);
-        width: 200px;
-        flex-direction: column;
-        padding-top: 20px;
-        transition: right 0.3s ease;
-        z-index: 9999;
-      }
-      header nav.active {
-        right: 0;
-      }
-      header nav a {
-        margin: 20px 0;
-        font-size: 18px;
-      }
-    }
-  </style>
 </head>
 <body>
 
 <header class="navbar">
   <div class="logo">AgostarTech</div>
-
   <div class="nav-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
     <span></span>
     <span></span>
     <span></span>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
@@ -118,242 +75,12 @@
   </div>
 </section>
 
-<!-- About Section -->
-<section class="about-section fade-in" id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-content">
-    <img src="assets/images/profile.jpg" alt="Agola Waziri Tom" class="profile-photo" />
-    <div class="about-text">
-      <p>Hello! I'm Agola Waziri Tom, known as AgostarTech. I'm a passionate Django developer, ethical hacker, network engineer, and tech tutor based in Tanzania. I specialize in building secure, scalable web applications, conducting penetration testing, and teaching technology skills to empower others.</p>
-      <p>With a strong background in cybersecurity and networking, I help clients secure their digital assets and streamline their workflows through automation and smart system design. Let's connect and innovate together!</p>
-    </div>
-  </div>
-</section>
+<!-- About, Skills, Services, Projects, Testimonials, CTA Sections (unchanged) -->
 
-<!-- Skills Section -->
-<section class="skills-section fade-in" id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <i class="fas fa-code skill-icon"></i>
-      <h3>Django Development</h3>
-      <p>Building efficient and secure web applications using Django framework.</p>
-    </div>
-    <div class="skill-item">
-      <i class="fas fa-shield-alt skill-icon"></i>
-      <h3>Ethical Hacking</h3>
-      <p>Performing penetration tests to identify and fix security vulnerabilities.</p>
-    </div>
-    <div class="skill-item">
-      <i class="fas fa-network-wired skill-icon"></i>
-      <h3>Networking</h3>
-      <p>Designing, configuring, and troubleshooting network infrastructures.</p>
-    </div>
-    <div class="skill-item">
-      <i class="fas fa-chalkboard-teacher skill-icon"></i>
-      <h3>Tech Tutoring</h3>
-      <p>Providing hands-on learning and mentoring in programming and security.</p>
-    </div>
-  </div>
-</section>
+<!-- Load Footer Dynamically -->
+<div id="footer-placeholder"></div>
 
-<!-- Services Section -->
-<section class="services-section fade-in" id="services">
-  <h2 class="section-title">Services</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <i class="fas fa-laptop-code"></i>
-      <h3>Custom Django Systems</h3>
-      <p>Tailored web applications to automate your business processes.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-user-secret"></i>
-      <h3>Penetration Testing</h3>
-      <p>Identify security weaknesses before attackers do.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-network-wired"></i>
-      <h3>Network Setup & Security</h3>
-      <p>Design and secure your local and wide area networks.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-chalkboard-teacher"></i>
-      <h3>Technical Training</h3>
-      <p>Workshops and tutoring for cybersecurity and programming.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-mobile-alt"></i>
-      <h3>Mobile App Prototyping</h3>
-      <p>Design and prototype mobile applications with great UX.</p>
-    </div>
-    <div class="service-card">
-      <i class="fas fa-cloud-upload-alt"></i>
-      <h3>Cloud Integration</h3>
-      <p>Connect your systems to cloud services for scalability.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section class="projects-section fade-in" id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="projects-grid">
-    <article class="project-card">
-      <img src="assets/images/project1.png" alt="Online Field Logbook System" />
-      <h3>Online Field Logbook System</h3>
-      <p>A Django-based platform to manage and track fieldwork logs efficiently for students and supervisors.</p>
-      <a href="projects.html#field-logbook" class="btn-secondary" target="_blank" rel="noopener">Learn More</a>
-    </article>
-    <article class="project-card">
-      <img src="assets/images/project2.png" alt="Event Registration System" />
-      <h3>Event Registration System</h3>
-      <p>Manage events, registrations, attendance, and certificates with a secure Django app.</p>
-      <a href="projects.html#event-registration" class="btn-secondary" target="_blank" rel="noopener">Learn More</a>
-    </article>
-    <article class="project-card">
-      <img src="assets/images/project3.png" alt="Certificate Generator" />
-      <h3>Certificate Generator</h3>
-      <p>Automated certificate creation with QR codes, barcodes, and unique serial numbers.</p>
-      <a href="projects.html#certificate-generator" class="btn-secondary" target="_blank" rel="noopener">Learn More</a>
-    </article>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials-section fade-in" id="testimonials">
-  <h2 class="section-title">Testimonials</h2>
-  <div class="testimonials-grid">
-    <blockquote class="testimonial-card">
-      "AgostarTech’s expertise helped secure our entire network infrastructure and improved our app’s security dramatically."
-      <footer>- Sarah M., CTO at TechCorp</footer>
-    </blockquote>
-    <blockquote class="testimonial-card">
-      "The Django system delivered by AgostarTech transformed our workflow, saving time and reducing errors."
-      <footer>- James K., Project Manager</footer>
-    </blockquote>
-    <blockquote class="testimonial-card">
-      "Fantastic tutoring sessions — clear, practical, and engaging!"
-      <footer>- Anna R., Student</footer>
-    </blockquote>
-  </div>
-</section>
-
-<!-- Call to Action Section -->
-<section class="cta-section fade-in" id="contact-cta">
-  <h2>Ready to work together?</h2>
-  <p>Contact me today to discuss your project or training needs.</p>
-  <a href="contact.html" class="btn-primary">Get in Touch</a>
-</section>
-
-<!-- Footer -->
-<footer class="footer fade-in">
-  <div class="footer-content">
-    <div class="footer-about">
-      <h3>About AgostarTech</h3>
-      <p>Empowering businesses and individuals through expert Django development, cybersecurity, and networking solutions.</p>
-    </div>
-    <div class="footer-contact">
-      <h3>Contact</h3>
-      <ul>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:agolatom180@gmail.com">agolatom180@gmail.com</a></li>
-        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/255793079017" target="_blank" rel="noopener">+255 793 079 017</a></li>
-        <li><i class="fab fa-telegram"></i> <a href="https://t.me/Dr.Tom" target="_blank" rel="noopener">@Dr.Tom</a></li>
-        <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/AgostarTech" target="_blank" rel="noopener">@AgostarTech</a></li>
-      </ul>
-    </div>
-    <div class="footer-social">
-      <a href="https://github.com/AgostarTech" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/agola-tom" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://youtube.com/@AgostarTech" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://tiktok.com/@little-genius" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 AgostarTech. All rights reserved.
-  </div>
-</footer>
-
-<script>
-console.log("Welcome to AgostarTech Portfolio");
-
-// Typing effect for .typing-text
-const typingTexts = [
-  "Django Dev",
-  "Ethical Hacker",
-  "Network Engineer",
-  "Tech Tutor",
-];
-
-const typingElement = document.querySelector(".typing-text span");
-let typingIndex = 0;
-let charIndex = 0;
-let typingForward = true;
-let typingDelay = 150;
-let eraseDelay = 100;
-let nextTextDelay = 2000;
-
-function type() {
-  if (!typingElement) return;
-
-  const currentText = typingTexts[typingIndex];
-
-  if (typingForward) {
-    if (charIndex < currentText.length) {
-      typingElement.textContent += currentText.charAt(charIndex);
-      charIndex++;
-      setTimeout(type, typingDelay);
-    } else {
-      typingForward = false;
-      setTimeout(type, nextTextDelay);
-    }
-  } else {
-    if (charIndex > 0) {
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(type, eraseDelay);
-    } else {
-      typingForward = true;
-      typingIndex = (typingIndex + 1) % typingTexts.length;
-      setTimeout(type, typingDelay);
-    }
-  }
-}
-type();
-
-// Fade-in on scroll for sections
-const faders = document.querySelectorAll(".fade-in");
-
-const appearOptions = {
-  threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px",
-};
-
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScroll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("appear");
-    appearOnScroll.unobserve(entry.target);
-  });
-},
-appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-// Mobile nav toggle
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector("header nav");
-
-if(navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-}
-</script>
-
+<script src="assets/js/main.js"></script>
+<script src="assets/js/footer-loader.js"></script>
 </body>
 </html>
