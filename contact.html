@@ -79,8 +79,7 @@
   <!-- External JS -->
   <script src="assets/js/disableInspect.js"></script>
   <script src="assets/js/contact.js"></script>
-</body>
-<div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 <script>
   fetch('footer.html')
     .then(response => response.text())
@@ -88,5 +87,7 @@
       document.getElementById('footer-placeholder').innerHTML = html;
     });
 </script>
+
+</body>
 
 </html>

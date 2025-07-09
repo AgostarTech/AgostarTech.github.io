@@ -63,10 +63,7 @@
     </div>
   </section>
   <script src="assets/js/disableInspect.js"></script>
-
-
-</body>
-<div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 <script>
   fetch('footer.html')
     .then(response => response.text())
@@ -74,5 +71,8 @@
       document.getElementById('footer-placeholder').innerHTML = html;
     });
 </script>
+
+
+</body>
 
 </html>
